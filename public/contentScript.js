@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(
                     options: {
                         title: 'Flagged article!',
                         message: 'This could potentially be fake news',
-                        iconUrl: 'https://i.imgur.com/CRLb1mm.png',
+                        iconUrl: 'https://i.imgur.com/VmBCsJO.png',
                         type: 'basic'
                     }
                 });
