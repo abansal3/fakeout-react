@@ -9,12 +9,13 @@ import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Home from './components/Home';
 
+
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: "SignIn"
+      currentPage: "SignUp"
     }
 
     this.routeCallback = this.routeCallback.bind(this);
@@ -25,16 +26,24 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getCurrentUser()
-    .then((userId) => {
-      if (userId) {
-        console.log(userId);
-        this.setState({ currentPage: "Home" });
-      }
-    })
-    .catch((error) => {
-      console.error("No user logged in")
-    })
+
+    // chrome.runtime.onMessage.addListener(
+    //     function(request, sender, sendResponse) {
+    //         console.log(request);
+    //     }
+    // );
+    
+    // Get current user and navigate to home
+    // getCurrentUser()
+    // .then((userId) => {
+    //   if (userId) {
+    //     console.log(userId);
+    //     this.setState({ currentPage: "Home" });
+    //   }
+    // })
+    // .catch((error) => {
+    //   console.error("No user logged in")
+    // });
   }
 
   render () {

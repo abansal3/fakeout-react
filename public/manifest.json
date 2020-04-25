@@ -8,6 +8,15 @@
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
   "permissions": [
     "activeTab",
     "storage",

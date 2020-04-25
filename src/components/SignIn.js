@@ -1,7 +1,7 @@
 /* global chrome */
 
 import React, {Component} from 'react';
-import '../stylesheets/SignIn.css';
+import '../stylesheets/App.css';
 import axios from 'axios';
 
 class SignIn extends Component {
@@ -43,16 +43,17 @@ class SignIn extends Component {
 
   render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Fakeout</h1>
-          <h3>CrowdSourcing Truth in Social Media</h3>
-          <form onSubmit={this.handleSubmit}>
-            <input name="email" type="email" value={this.state.email} onChange={this.handleChange}></input>
-            <input name="password" type="password" value={this.state.password} onChange={this.handleChange}></input>
-            <input type="submit" value="Sign In"></input>
-          </form>
-        </header>
+      <div className="wrapper">
+        <header>
+            <h1>Fakeout</h1>
+            <h3>CrowdSourcing Truth in Social Media</h3>
+          </header>
+        <form onSubmit={this.handleSubmit} class="authenticationForm">
+          <input name="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleChange}></input>
+          <input name="password" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
+          <input type="submit" value="Sign In"></input>
+        </form>
+        <p class="built-with">Built with ❤️ in Singapore</p>
       </div>
     );
   }
