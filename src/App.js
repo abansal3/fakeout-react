@@ -27,23 +27,23 @@ class App extends Component {
 
   componentDidMount() {
 
-    // chrome.runtime.onMessage.addListener(
-    //     function(request, sender, sendResponse) {
-    //         console.log(request);
-    //     }
-    // );
+    chrome.runtime.onMessage.addListener(
+        function(request, sender, sendResponse) {
+            console.log(request);
+        }
+    );
     
     // Get current user and navigate to home
-    // getCurrentUser()
-    // .then((userId) => {
-    //   if (userId) {
-    //     console.log(userId);
-    //     this.setState({ currentPage: "Home" });
-    //   }
-    // })
-    // .catch((error) => {
-    //   console.error("No user logged in")
-    // });
+    getCurrentUser()
+    .then((userId) => {
+      if (userId) {
+        console.log(userId);
+        this.setState({ currentPage: "Home" });
+      }
+    })
+    .catch((error) => {
+      console.error("No user logged in")
+    });
   }
 
   render () {

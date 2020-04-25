@@ -154,3 +154,38 @@ p.built-with {
     color: black;
     text-align: center;
 }
+
+image#checkmark {
+    height: 30px;
+    width: 30px;
+}
+
+p#flag_submission_confirmation {
+    font-size: 15px;
+    margin-top: 20px;
+    color: black;
+}
+
+ul#flaggedLinksContainer {
+    padding: 0 !important;
+    width: 80%;
+}
+
+p#flaggedLinksTitle {
+    font-size: 15px;
+    color: black
+}
+
+li.flaggedArticle {
+    height: 30px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.flaggedArticle:hover {
+    background: rgba(110, 46, 216, 0.2);
+    cursor: pointer;
+}
